@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Nhã Thy! 🎂✨</title>
+    <meta name="description" content="Trang web chúc mừng sinh nhật được làm đặc biệt dành tặng Nhã Thy. Tuổi mới ngập tràn niềm vui, sức sống và luôn năng động nhé!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Custom JS -->
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- Background Decoration -->
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
+    <!-- 1. INTRO ENVELOPE SECTION -->
+    <section id="intro-section" class="active-section">
+        <div class="intro-container">
+            <div class="envelope-wrapper">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-paper">
+                        <div class="paper-title">Gửi Nhã Thy 💌</div>
+                        <div class="paper-hint">Một món quà nhỏ đầy năng lượng đang chờ cậu...</div>
+                    </div>
+                    <div class="envelope-front"></div>
+                </div>
+            </div>
+            <button id="open-btn" class="btn btn-primary btn-pulse">
+                <i class="fa-solid fa-gift"></i> Mở Quà Nhã Thy Ơi!
+            </button>
+        </div>
+    </section>
+
+    <!-- 2. CELEBRATION SECTION -->
+    <section id="celebration-section" class="hidden-section">
+        <!-- Floating Music Player -->
+        <div class="music-player" id="music-player">
+            <button id="music-toggle-btn" class="music-btn" aria-label="Bật/Tắt nhạc">
+                <i class="fa-solid fa-music"></i>
+            </button>
+            <div class="music-info">
+                <span class="music-title">Happy Birthday Acoustic Synth</span>
+                <span class="music-status">Nhấp để phát nhạc 🎵</span>
+            </div>
+        </div>
+
+        <div class="celebration-container">
+            <!-- Header Text -->
+            <div class="birthday-header text-center">
+                <h1 class="sparkle-text">Happy Birthday, Nhã Thy!</h1>
+                <p class="subtitle">Chúc cậu tuổi mới ngập tràn năng lượng và nụ cười rạng rỡ! 🌟</p>
+            </div>
+
+            <!-- Interactive Cake Section -->
+            <div class="cake-box">
+                <p class="candle-hint" id="candle-hint">🕯️ Nhấp vào 3 ngọn nến để thổi tắt và ước nguyện nhé! 🕯️</p>
+                <div class="cake-container">
+                    <div class="cake">
+                        <!-- Candles -->
+                        <div class="candles-wrapper">
+                            <div class="candle" id="candle-1" data-blown="false">
+                                <div class="flame"></div>
+                                <div class="wax"></div>
+                            </div>
+                            <div class="candle" id="candle-2" data-blown="false">
+                                <div class="flame"></div>
+                                <div class="wax"></div>
+                            </div>
+                            <div class="candle" id="candle-3" data-blown="false">
+                                <div class="flame"></div>
+                                <div class="wax"></div>
+                            </div>
+                        </div>
+                        <!-- Top Layer -->
+                        <div class="layer layer-top">
+                            <div class="icing"></div>
+                            <div class="drip drip-1"></div>
+                            <div class="drip drip-2"></div>
+                            <div class="drip drip-3"></div>
+                        </div>
+                        <!-- Bottom Layer -->
+                        <div class="layer layer-bottom"></div>
+                        <!-- Stand -->
+                        <div class="cake-stand"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heartfelt Wishes & Gallery (Hidden until candles are blown) -->
+            <div id="wishes-gallery-container" class="wishes-hidden">
+                
+                <!-- Heartfelt Letter -->
+                <div class="letter-box">
+                    <div class="letter-header">
+                        <i class="fa-solid fa-envelope-open-text letter-icon"></i>
+                        <h2>Gửi Nhã Thy yêu quý, 💌</h2>
+                    </div>
+                    <div class="letter-body">
+                        <!-- The target for Typewriter effect -->
+                        <div id="typewriter-message" class="typewriter-text"></div>
+                    </div>
+                </div>
+
+                <!-- Video Gallery Box -->
+                <div class="video-box text-center">
+                    <h3 class="section-title"><i class="fa-solid fa-circle-play"></i> Khoảnh khắc vui vẻ 🎬</h3>
+                    <div class="video-wrapper">
+                        <video id="birthday-video" controls poster="assets/images/photo3.png">
+                            <source src="assets/videos/birthday-video.mp4" type="video/mp4">
+                            Trình duyệt của bạn không hỗ trợ thẻ video. Hãy đặt file video của bạn vào thư mục <code>assets/videos/birthday-video.mp4</code>.
+                        </video>
+                        <div class="video-overlay" id="video-overlay">
+                            <div class="overlay-content">
+                                <i class="fa-solid fa-play play-overlay-icon"></i>
+                                <p>Xem video kỷ niệm vui vẻ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photo Gallery Carousel -->
+                <div class="gallery-box">
+                    <h3 class="section-title text-center"><i class="fa-solid fa-images"></i> Ký ức rực rỡ 📸</h3>
+                    <div class="carousel-container">
+                        <div class="carousel-slides">
+                            <div class="carousel-slide active">
+                                <img src="assets/images/photo1.png" alt="Kỷ niệm vui vẻ 1">
+                                <div class="slide-caption">Nụ cười ngập tràn sức sống 🌟</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/photo2.png" alt="Kỷ niệm vui vẻ 2">
+                                <div class="slide-caption">Tuổi trẻ đầy hoài bão và ước mơ ✨</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/photo3.png" alt="Kỷ niệm vui vẻ 3">
+                                <div class="slide-caption">Mãi luôn năng động và hạnh phúc nhé! 🎉</div>
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev-btn" id="prev-btn" aria-label="Ảnh trước">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next-btn" id="next-btn" aria-label="Ảnh sau">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <div class="carousel-dots" id="carousel-dots">
+                            <span class="dot active" data-index="0"></span>
+                            <span class="dot" data-index="1"></span>
+                            <span class="dot" data-index="2"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Sign-off -->
+                <div class="footer-sign text-center">
+                    <p>Được tạo ra với tất cả sự trân trọng 💖</p>
+                    <small>Nhấn phím F5 để mở lại món quà nhé!</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confetti Canvas & Balloon container -->
+    <div id="balloon-container"></div>
+    <canvas id="confetti-canvas"></canvas>
+
+</body>
+</html>
