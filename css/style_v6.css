@@ -1205,7 +1205,8 @@ body {
 
 #start-game-btn {
     padding: 15px 35px;
-    font-family: var(--font-gamer);
+    font-family: var(--font-sans);
+    font-weight: 800;
     font-size: 1.15rem;
     letter-spacing: 1px;
     background: linear-gradient(135deg, var(--primary-color) 0%, #B30500 100%);
@@ -1607,9 +1608,24 @@ body {
 @media (max-width: 600px) {
     .vs-title { font-size: 1.4rem; }
     .vs-subtitle { font-size: 0.75rem; }
-    .loading-cards { flex-direction: column; gap: 15px; }
-    .player-card { width: 170px; height: 250px; }
-    .vs-divider { font-size: 1.8rem; margin: 5px 0; }
+    .loading-container { gap: 15px; }
+    .loading-cards { flex-direction: column; gap: 10px; }
+    .player-card { width: 130px; height: 195px; }
+    .player-name { font-size: 1.0rem; }
+    .player-role { font-size: 0.6rem; }
+    .player-rank {
+        font-size: 0.55rem;
+        top: 8px;
+        right: 8px;
+        padding: 2px 4px;
+    }
+    .player-info { padding: 10px; }
+    .vs-divider { font-size: 1.5rem; margin: 2px 0; }
+    #start-game-btn {
+        font-size: 0.9rem !important;
+        padding: 10px 20px !important;
+        white-space: nowrap !important;
+    }
     .victory-banner-text { font-size: 3rem; letter-spacing: 5px; }
     .victory-banner-wings { width: 200px; }
     .victory-banner-sub { font-size: 0.85rem; }
