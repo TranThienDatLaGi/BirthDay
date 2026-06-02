@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Nhã Thy! 🎂✨</title>
-    <meta name="description" content="Trang web chúc mừng sinh nhật được làm đặc biệt dành tặng Nhã Thy. Tuổi mới ngập tràn niềm vui, sức sống và luôn năng động nhé!">
-    
+    <title>Happy Birthday Nhã Thy! 🏆 AD Carry MVP</title>
+    <meta name="description"
+        content="Trang web chúc mừng sinh nhật phong cách game thủ LMHT dành tặng Nhã Thy. Show and Prove tuổi mới rực rỡ!">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;600;800&family=Pacifico&family=Rajdhani:wght@500;700&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
+
+    <!-- Custom CSS (Bust cache to v4) -->
+    <link rel="stylesheet" href="css/style_v4.css">
+
     <!-- Custom JS -->
-    <script src="js/script.js" defer></script>
+    <script src="js/script_v2.js" defer></script>
 </head>
+
 <body>
 
     <!-- Background Decoration -->
     <div class="bg-glow-1"></div>
     <div class="bg-glow-2"></div>
+
+    <!-- Persistent Music Player -->
+    <div class="music-player hidden-element" id="music-player">
+        <button id="music-toggle-btn" class="music-btn" aria-label="Bật/Tắt nhạc">
+            <i class="fa-solid fa-music"></i>
+        </button>
+        <div class="music-info">
+            <span class="music-title">GODS - NewJeans (T1 Worlds Anthem)</span>
+            <span class="music-status">Nhấp để phát nhạc 🎵</span>
+        </div>
+    </div>
 
     <!-- 1. INTRO ENVELOPE SECTION -->
     <section id="intro-section" class="active-section">
@@ -34,79 +50,149 @@
                     <div class="envelope-flap"></div>
                     <div class="envelope-paper">
                         <div class="paper-title">Gửi Nhã Thy 💌</div>
-                        <div class="paper-hint">Một món quà nhỏ đầy năng lượng đang chờ cậu...</div>
+                        <div class="paper-hint">Một thử thách kịch tính đang chờ xạ thủ... 🎮</div>
                     </div>
                     <div class="envelope-front"></div>
                 </div>
             </div>
             <button id="open-btn" class="btn btn-primary btn-pulse">
-                <i class="fa-solid fa-gift"></i> Mở Quà Nhã Thy Ơi!
+                <i class="fa-solid fa-gamepad"></i> Chấp Nhận Thử Thách! 💥
             </button>
         </div>
     </section>
 
-    <!-- 2. CELEBRATION SECTION -->
-    <section id="celebration-section" class="hidden-section">
-        <!-- Floating Music Player -->
-        <div class="music-player" id="music-player">
-            <button id="music-toggle-btn" class="music-btn" aria-label="Bật/Tắt nhạc">
-                <i class="fa-solid fa-music"></i>
-            </button>
-            <div class="music-info">
-                <span class="music-title">Happy Birthday Acoustic Synth</span>
-                <span class="music-status">Nhấp để phát nhạc 🎵</span>
-            </div>
-        </div>
-
-        <div class="celebration-container">
-            <!-- Header Text -->
-            <div class="birthday-header text-center">
-                <h1 class="sparkle-text">Happy Birthday, Nhã Thy!</h1>
-                <p class="subtitle">Chúc cậu tuổi mới ngập tràn năng lượng và nụ cười rạng rỡ! 🌟</p>
+    <!-- 2. LOADING SCREEN SECTION -->
+    <section id="loading-screen" class="hidden-section">
+        <div class="loading-container">
+            <div class="loading-header text-center">
+                <div class="vs-title">TRẬN ĐẤU SINH NHẬT NHÃ THY</div>
+                <div class="vs-subtitle">SUMMONER'S RIFT - SHOW & PROVE MODE</div>
             </div>
 
-            <!-- Interactive Cake Section -->
-            <div class="cake-box">
-                <p class="candle-hint" id="candle-hint">🕯️ Nhấp vào 3 ngọn nến để thổi tắt và ước nguyện nhé! 🕯️</p>
-                <div class="cake-container">
-                    <div class="cake">
-                        <!-- Candles -->
-                        <div class="candles-wrapper">
-                            <div class="candle" id="candle-1" data-blown="false">
-                                <div class="flame"></div>
-                                <div class="wax"></div>
-                            </div>
-                            <div class="candle" id="candle-2" data-blown="false">
-                                <div class="flame"></div>
-                                <div class="wax"></div>
-                            </div>
-                            <div class="candle" id="candle-3" data-blown="false">
-                                <div class="flame"></div>
-                                <div class="wax"></div>
-                            </div>
+            <div class="loading-cards">
+                <!-- Nhã Thy Player Card -->
+                <div class="player-card blue-side">
+                    <div class="card-inner">
+                        <div class="card-bg" style="background-image: url('assets/images/NhaThy/nhathy1_v2.jpg');">
                         </div>
-                        <!-- Top Layer -->
-                        <div class="layer layer-top">
-                            <div class="icing"></div>
-                            <div class="drip drip-1"></div>
-                            <div class="drip drip-2"></div>
-                            <div class="drip drip-3"></div>
+                        <div class="card-overlay"></div>
+                        <div class="player-info">
+                            <span class="player-role">AD CARRY (MVP)</span>
+                            <span class="player-name">NHÃ THY</span>
+                            <span class="player-title">Thần Đồng Sát Thương</span>
                         </div>
-                        <!-- Bottom Layer -->
-                        <div class="layer layer-bottom"></div>
-                        <!-- Stand -->
-                        <div class="cake-stand"></div>
+                        <div class="player-rank">
+                            <i class="fa-solid fa-trophy"></i> CHALLENGER
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vs-divider">VS</div>
+
+                <!-- Gumayusi Player Card -->
+                <div class="player-card red-side">
+                    <div class="card-inner">
+                        <div class="card-bg"
+                            style="background-image: url('assets/images/gumayusi/gumayusi_shot_full.jpg');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="player-info">
+                            <span class="player-role">WORLD CHAMPION ADC</span>
+                            <span class="player-name">GUMAYUSI</span>
+                            <span class="player-title">T1 Xạ Thủ Huyền Thoại</span>
+                        </div>
+                        <div class="player-rank">
+                            <i class="fa-solid fa-crown"></i> T1 CHAMPION
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Heartfelt Wishes & Gallery (Hidden until candles are blown) -->
-            <div id="wishes-gallery-container" class="wishes-hidden">
-                
+            <!-- Loading Bar -->
+            <div class="loading-bar-wrapper">
+                <div class="loading-bar-outer">
+                    <div id="loading-bar-fill"></div>
+                </div>
+                <div class="loading-bar-text">Đang tải Summoner's Rift... <span id="loading-percent">0</span>%</div>
+            </div>
+
+            <!-- Start Game Button -->
+            <button id="start-game-btn" class="btn btn-primary btn-pulse hidden-element">
+                <i class="fa-solid fa-crosshairs"></i> VÀO TRẬN ĐẤU (ENTER MATCH)
+            </button>
+        </div>
+    </section>
+
+    <!-- 3. MINI-GAME SECTION -->
+    <section id="game-section" class="hidden-section">
+        <div class="game-container">
+            <!-- Scoreboard -->
+            <div class="game-scoreboard">
+                <div class="score-item">
+                    <span class="score-label">CHỈ SỐ FARM (CS)</span>
+                    <span class="score-value text-red" id="cs-display">0/10</span>
+                </div>
+                <div class="score-item vs-score">
+                    <span class="score-label">TRẬN ĐẤU</span>
+                    <span class="score-value text-gold" id="game-status-text">FARM LÍNH ĐI CẬU! 🏹</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">VÀNG TÍCH LŨY</span>
+                    <span class="score-value text-yellow"><span id="gold-display">0</span>G</span>
+                </div>
+            </div>
+
+            <!-- Game Instructions -->
+            <p class="game-hint">🎯 Nhấp/Chạm nhanh vào lính đang di chuyển trên màn hình để Gumayusi ngắm bắn!</p>
+
+            <!-- Game Arena -->
+            <div id="game-arena">
+                <!-- Shooter Guma -->
+                <div id="guma-shooter">
+                    <!-- Speech bubble follows Guma -->
+                    <div class="speech-bubble" id="guma-bubble">
+                        <span class="bubble-speaker">GUMAYUSI:</span>
+                        <span class="bubble-text">Show & Prove! Nhắm bắn chuẩn nhé Nhã Thy! 🎯</span>
+                    </div>
+                    <img src="assets/images/gumayusi/gumayusi_shot_v2.png" alt="Gumayusi Shooter">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. VICTORY OVERLAY -->
+    <div id="victory-overlay" class="victory-hidden">
+        <div class="victory-banner-wrapper">
+            <div class="victory-banner-wings"></div>
+            <div class="victory-banner-text">VICTORY</div>
+            <div class="victory-banner-sub">NHÃ THY HOÀN THÀNH 10 CS - MVP OF THE MATCH! 🏆</div>
+        </div>
+    </div>
+
+    <!-- 5. CELEBRATION SECTION -->
+    <section id="celebration-section" class="hidden-section">
+        <div class="celebration-container">
+            <!-- Header Text -->
+            <div class="birthday-header text-center">
+                <h1 class="sparkle-text">Happy Birthday, Nhã Thy!</h1>
+                <p class="subtitle">Chúc cậu tuổi mới ngập tràn chiến công rực rỡ và nụ cười rạng rỡ! 🏆✨</p>
+            </div>
+
+            <!-- Interactive Wishes card containing gumayusi_shot_full -->
+            <div id="wishes-gallery-container" class="wishes-active">
+
+                <!-- Guma Poster Card -->
+                <div class="guma-poster-card text-center">
+                    <div class="poster-wrapper">
+                        <img src="assets/images/gumayusi/gumayusi_shot_full.jpg" alt="Gumayusi T1 Jinx"
+                            class="guma-poster-img">
+                        <div class="poster-glow-border"></div>
+                    </div>
+                </div>
+
                 <!-- Heartfelt Letter -->
                 <div class="letter-box">
                     <div class="letter-header">
-                        <i class="fa-solid fa-envelope-open-text letter-icon"></i>
+                        <i class="fa-solid fa-trophy letter-icon"></i>
                         <h2>Gửi Nhã Thy yêu quý, 💌</h2>
                     </div>
                     <div class="letter-body">
@@ -117,11 +203,13 @@
 
                 <!-- Video Gallery Box -->
                 <div class="video-box text-center">
-                    <h3 class="section-title"><i class="fa-solid fa-circle-play"></i> Khoảnh khắc vui vẻ 🎬</h3>
+                    <h3 class="section-title"><i class="fa-solid fa-circle-play"></i> Thầy ba chúc mừng sinh nhật nè 🎬
+                    </h3>
                     <div class="video-wrapper">
-                        <video id="birthday-video" controls poster="assets/images/photo3.png">
+                        <video id="birthday-video" controls poster="assets/images/thayba.jfif">
                             <source src="assets/videos/birthday-video.mp4" type="video/mp4">
-                            Trình duyệt của bạn không hỗ trợ thẻ video. Hãy đặt file video của bạn vào thư mục <code>assets/videos/birthday-video.mp4</code>.
+                            Trình duyệt của bạn không hỗ trợ thẻ video. Hãy đặt file video của bạn vào thư mục
+                            <code>assets/videos/birthday-video.mp4</code>.
                         </video>
                         <div class="video-overlay" id="video-overlay">
                             <div class="overlay-content">
@@ -138,16 +226,28 @@
                     <div class="carousel-container">
                         <div class="carousel-slides">
                             <div class="carousel-slide active">
-                                <img src="assets/images/photo1.png" alt="Kỷ niệm vui vẻ 1">
+                                <img src="assets/images/NhaThy/nhathy1_v2.jpg" alt="Kỷ niệm vui vẻ 1">
                                 <div class="slide-caption">Nụ cười ngập tràn sức sống 🌟</div>
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/images/photo2.png" alt="Kỷ niệm vui vẻ 2">
+                                <img src="assets/images/NhaThy/nhathy2_v2.jpg" alt="Kỷ niệm vui vẻ 2">
                                 <div class="slide-caption">Tuổi trẻ đầy hoài bão và ước mơ ✨</div>
                             </div>
                             <div class="carousel-slide">
-                                <img src="assets/images/photo3.png" alt="Kỷ niệm vui vẻ 3">
+                                <img src="assets/images/NhaThy/nhathy3_v2.jpg" alt="Kỷ niệm vui vẻ 3">
                                 <div class="slide-caption">Mãi luôn năng động và hạnh phúc nhé! 🎉</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/NhaThy/nhathy4.jfif" alt="Kỷ niệm vui vẻ 4">
+                                <div class="slide-caption">Những khoảnh khắc tuyệt vời cùng bạn bè 💫</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/NhaThy/nhathy5.jfif" alt="Kỷ niệm vui vẻ 5">
+                                <div class="slide-caption">Luôn rạng rỡ và tự tin tỏa sáng 🌸</div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/images/NhaThy/nhathy6.jfif" alt="Kỷ niệm vui vẻ 6">
+                                <div class="slide-caption">Xinh tươi trong từng khung hình 📸</div>
                             </div>
                         </div>
                         <button class="carousel-btn prev-btn" id="prev-btn" aria-label="Ảnh trước">
@@ -160,6 +260,9 @@
                             <span class="dot active" data-index="0"></span>
                             <span class="dot" data-index="1"></span>
                             <span class="dot" data-index="2"></span>
+                            <span class="dot" data-index="3"></span>
+                            <span class="dot" data-index="4"></span>
+                            <span class="dot" data-index="5"></span>
                         </div>
                     </div>
                 </div>
@@ -167,7 +270,7 @@
                 <!-- Footer Sign-off -->
                 <div class="footer-sign text-center">
                     <p>Được tạo ra với tất cả sự trân trọng 💖</p>
-                    <small>Nhấn phím F5 để mở lại món quà nhé!</small>
+                    <small>Nhấn phím F5 để chơi lại game nhé!</small>
                 </div>
             </div>
         </div>
@@ -178,4 +281,5 @@
     <canvas id="confetti-canvas"></canvas>
 
 </body>
+
 </html>
